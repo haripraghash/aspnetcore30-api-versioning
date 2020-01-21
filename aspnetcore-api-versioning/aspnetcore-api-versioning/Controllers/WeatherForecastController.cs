@@ -7,9 +7,9 @@ using Microsoft.Extensions.Logging;
 
 namespace aspnetcore_api_versioning.Controllers
 {
-    [ApiController]
-    [Route("[api/v{version:apiVersion}/[[controller]]")]
     [ApiVersion("1.0")]
+    [ApiController]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
